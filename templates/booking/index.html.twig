@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block body %}
+    <div class="container mt-5 col-sm-11 col-md-10 col-lg-6">
+        <div class="card bg-light">
+            <div class="container px-4">
+                <h1 class="mb-5 mt-3 text-center">Venez nous voir !</h1>
+                {{ form_start(form) }}
+                {{ form_rest(form) }}
+                <div class="error">
+                    {% if errorNbrPlace is defined %}
+                        {{ errorNbrPlace }}
+                    {% endif %}
+                </div>
+                <div class="contact-button row">
+                    <button class="btn btn-info mt-2 mb-4 form-control-lg col-sm-2 col-md-6 mt-4">{{ button_label|default('Envoyer') }}</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -54,6 +54,11 @@ class Booking
         return $this->start;
     }
 
+    public function getStartFormat($format = 'd/m/Y à H:i')
+    {
+        return $this->start->format($format).' '.'nombre de places restantes:'.' '.$this->place;
+    }
+
     public function setStart(?\DateTimeInterface $start): self
     {
         $this->start = $start;
