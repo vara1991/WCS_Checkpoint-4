@@ -6,7 +6,7 @@
     <div class="container py-5" id="containerPerformer">
         {% for performer in performers %}
             <div class="card mb-3 col-sm-11 col-md-4 justify-content-between">
-                <img class="card-img-top" src="https://www.l4mcdn.fr/5/7/579641.jpg" alt="Card image cap">
+                <img class="card-img-top h-50" src="{{vich_uploader_asset(performer,'performerFile')}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ performer.firstname }} {{ performer.lastname }}</h5>
                     <p class="card-text">{{ performer.biography }}</p>

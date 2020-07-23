@@ -45,6 +45,7 @@ class AppFixtures extends Fixture
             $show = new Show();
             $show->setName($faker->word);
             $show->setSummary($faker->text);
+            $show->setUpdatedAt(new \DateTime('now'));
             $manager->persist($show);
             $showArray = $show;
         }

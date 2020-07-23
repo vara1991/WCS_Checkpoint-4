@@ -15,10 +15,18 @@ easy_admin:
                     - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
             form:
                 fields:
-                    - { property: 'performerFile', type: 'vich_image' }
+                    - { property: 'firstname'}
+                    - { property: 'lastname'}
+                    - { property: 'biography'}
+                    - { property: 'performerFile', type: 'file', label: 'Image' }
         Show:
             class: App\Entity\Show
             list:
                 actions:
                     - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
                     - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'summary'}
+                    - { property: 'showFile', type: 'file', label: 'Image' }

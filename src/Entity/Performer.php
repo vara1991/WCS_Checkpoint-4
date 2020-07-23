@@ -28,10 +28,10 @@ class Performer
      */
     private $picture;
 
-    /*/**
+    /**
      * @Vich\UploadableField(mapping="performer_file", fileNameProperty="picture")
      */
-    /*private $performerFile;*/
+    private $performerFile;
 
     /**
      * @ORM\Column(type="datetime")
@@ -117,7 +117,7 @@ class Performer
         return $this;
     }
 
-    public function setPosterFile(File $picture = null)
+    public function setPerformerFile(File $picture = null)
     {
         $this->performerFile = $picture;
         if ($picture) {
@@ -125,7 +125,7 @@ class Performer
         }
     }
 
-    public function getPosterFile(): ?File
+    public function getPerformerFile(): ?File
     {
         return $this->performerFile;
     }
