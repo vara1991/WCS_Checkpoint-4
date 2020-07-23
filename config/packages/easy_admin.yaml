@@ -13,6 +13,9 @@ easy_admin:
                 actions:
                     - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
                     - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+            form:
+                fields:
+                    - { property: 'performerFile', type: 'vich_image' }
         Show:
             class: App\Entity\Show
             list:

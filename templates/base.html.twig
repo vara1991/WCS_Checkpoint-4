@@ -11,9 +11,9 @@
     <body>
         <header>
             {% include 'navbar.html.twig' %}
-            <h1>Wild Circus</h1>
+            <h1 class="bg-dark">Wild Circus</h1>
         </header>
-        <main>
+        <main {% block class %}{% endblock %}>
             {% block body %}{% endblock %}
         </main>
         <footer>

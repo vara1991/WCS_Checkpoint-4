@@ -6,9 +6,12 @@ use App\Repository\PerformerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=PerformerRepository::class)
+ * @Vich\Uploadable
  */
 class Performer
 {
@@ -21,8 +24,21 @@ class Performer
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
      */
     private $picture;
+
+    /**
+     * @Vich\UploadableField(mapping="performer_file", fileNameProperty="picture")
+     * @var File
+     */
+    private $performerFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -100,6 +116,19 @@ class Performer
         $this->biography = $biography;
 
         return $this;
+    }
+
+    public function setPosterFile(File $picture = null)
+    {
+        $this->performerFile = $picture;
+        if ($picture) {
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getPosterFile(): ?File
+    {
+        return $this->performerFile;
     }
 
     /**

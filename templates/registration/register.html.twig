@@ -16,7 +16,9 @@
                         label: 'Password'
                     }) }}
                     {#{{ form_row(registrationForm.agreeTerms) }}#}
-                <button class="btn btn-info mt-2 mb-4 form-control-lg col-12 mt-4" type="submit">Valider</button>
+                <div class="contact-button row">
+                    <button class="btn btn-info mt-2 mb-4 form-control-lg col-sm-2 col-md-6 mt-4">{{ button_label|default('Envoyer') }}</button>
+                </div>
                 {{ form_end(registrationForm) }}
             </div>
         </div>
