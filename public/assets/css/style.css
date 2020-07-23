@@ -58,6 +58,13 @@ h2{
     padding: 5rem;
 }
 
+/*performer*/
+#containerPerformer{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
 /*contact*/
 .contact-button{
     justify-content: center;
@@ -93,6 +100,12 @@ footer{
 
 @media only screen and (max-width: 690px) {
     #navbar-ul{
+        flex-direction: column;
+    }
+
+    /*performer*/
+    #containerPerformer{
+        display: flex;
         flex-direction: column;
     }
 }

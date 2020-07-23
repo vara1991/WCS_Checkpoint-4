@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artistes{% endblock %}
+
+{% block body %}
+    <div class="container py-5" id="containerPerformer">
+        {% for performer in performers %}
+            <div class="card mb-3 col-sm-11 col-md-4 justify-content-between">
+                <img class="card-img-top" src="https://www.l4mcdn.fr/5/7/579641.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ performer.firstname }} {{ performer.lastname }}</h5>
+                    <p class="card-text">{{ performer.biography }}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -28,11 +28,10 @@ class Performer
      */
     private $picture;
 
-    /**
+    /*/**
      * @Vich\UploadableField(mapping="performer_file", fileNameProperty="picture")
-     * @var File
      */
-    private $performerFile;
+    /*private $performerFile;*/
 
     /**
      * @ORM\Column(type="datetime")
@@ -129,6 +128,13 @@ class Performer
     public function getPosterFile(): ?File
     {
         return $this->performerFile;
+    }
+
+    public function setUpdatedAt($updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 
     /**
