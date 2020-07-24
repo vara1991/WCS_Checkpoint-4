@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annulation{% endblock %}
+
+{% block body %}
+    <div class="container py-5 col-sm-11 col-md-10 col-lg-5">
+        <div class="card bg-light">
+            <div class="container px-4 pb-3">
+                <h2 class="mb-5 mt-3 text-center">Annulation d'une réservation</h2>
+                <form method="post">
+                    <input type="email" placeholder="email" name="email" class="col-12">
+                    <button class="btn btn-info mt-2 mb-4 form-control-lg col-12">{{ button_label|default('Envoyer') }}</button>
+                    <div class="error">
+                        {% if errorMail is defined %}
+                            {{ errorMail }}
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Spectacles {% endblock %}
+
+{% block body %}
+    <div class="container py-5" id="containerPerformer">
+        {% for show in shows %}
+            <div class="card mb-3 col-sm-11 col-md-4 justify-content-between">
+                <img class="card-img-top h-50" src="{{vich_uploader_asset(show,'showFile')}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ show.name }}</h5>
+                    <p class="card-text">{{ show.summary }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

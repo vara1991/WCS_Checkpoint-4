@@ -1,0 +1,11 @@
+{% apply inky_to_html %}
+    <container>
+        <row>
+            <columns>
+                <p>Vous avez recu un message de {{ civility }} {{ firstname }} {{lastname}}</p>
+                <p>Sujet : {{ object }}</p>
+                <p>Message : {{ message }}</p>
+            </columns>
+        </row>
+    </container>
+{% endapply %}

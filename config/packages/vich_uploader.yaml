@@ -1,0 +1,12 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        performer_file:
+            uri_prefix: '%app.path.performer_img%'
+            upload_destination: '%kernel.project_dir%/public%app.path.performer_img%'
+
+        show_file:
+            uri_prefix: '%app.path.show_img%'
+            upload_destination: '%kernel.project_dir%/public%app.path.show_img%'
+

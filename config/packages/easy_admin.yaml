@@ -1,0 +1,40 @@
+easy_admin:
+    site_name: 'Wild Circus'
+    entities:
+        Booking:
+            class: App\Entity\Booking
+            list:
+                actions:
+                    - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+                    - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+        Spectator:
+            class: App\Entity\Spectator
+            disabled_actions: ['new']
+            list:
+                actions:
+                    - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+                    - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+                    - -edit
+        Performer:
+            class: App\Entity\Performer
+            list:
+                actions:
+                    - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+                    - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+            form:
+                fields:
+                    - { property: 'firstname'}
+                    - { property: 'lastname'}
+                    - { property: 'biography'}
+                    - { property: 'performerFile', type: 'file', label: 'Image' }
+        Show:
+            class: App\Entity\Show
+            list:
+                actions:
+                    - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
+                    - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-warning'}
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'summary'}
+                    - { property: 'showFile', type: 'file', label: 'Image' }
