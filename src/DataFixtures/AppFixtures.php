@@ -24,7 +24,7 @@ class AppFixtures extends Fixture
         $faker = Factory::create();
 
         $user = new User();
-        $user->setEmail('varaponegaire@gmail.com');
+        $user->setEmail('admin@gmail.com');
         $user->setRoles(["ROLE_ADMIN"]);
         $user->setPassword($this->encoder->encodePassword($user,'123456'));
         $manager->persist($user);
