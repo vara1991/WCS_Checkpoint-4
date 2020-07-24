@@ -13,7 +13,16 @@
             {% include 'navbar.html.twig' %}
             <h1 class="bg-dark">Wild Circus</h1>
         </header>
-        <main {% block class %}{% endblock %}>
+        <main>
+            <div class="container pt-3">
+                {% for category, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
             {% block body %}{% endblock %}
         </main>
         <footer>

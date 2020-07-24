@@ -1,0 +1,10 @@
+{% apply inky_to_html %}
+    <container>
+        <row>
+            <columns>
+                <p>Bonjour {{ firstname }} {{ lastname }}</p>
+                <p>Vous avez réservé un spectacle à la Wild Circus le {{ booking |date("m/d/Y \\à\\ H:i")}}</p>
+            </columns>
+        </row>
+    </container>
+{% endapply %}

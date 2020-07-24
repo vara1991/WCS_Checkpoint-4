@@ -34,6 +34,8 @@ class ContactController extends AbstractController
                     'message' => $data['message']
             ]);
             $mailer->send($email);
+            $this->addFlash('success', 'Votre mail a bien été envoyé !');
+
         }
 
         return $this->render('contact/index.html.twig',[

@@ -20,7 +20,7 @@ class SpectatorType extends AbstractType
             ->add('booking', EntityType::class, [
                 'class' => Booking::class,
                 'choice_label' => 'getStartFormat',
-                'label' => 'Réservation'
+                'label' => 'RDV'
             ])
         ;
     }
