@@ -1,5 +1,13 @@
 Wild-Circus
 
+Installer le wild circus:
+-git clone https://github.com/vara1991/Wild-Circus.git
+-dans le fichier env met ton speudo/mot de passe/le nom de ta BDD
+-composer install
+-bin/console d:d:c
+-bin/console d:m:m
+-php bin/console doctrine:fixtures:load
+
 Le client:
 - Peut contacter l'admin 
 - Réserver une séance
