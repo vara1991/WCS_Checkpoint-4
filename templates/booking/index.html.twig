@@ -3,9 +3,9 @@
 {% block title %}Réservation{% endblock %}
 
 {% block body %}
-    <div class="container pt-5 col-sm-11 col-md-10 col-lg-6">
+    <div class="container py-5 col-sm-11 col-md-10 col-lg-6">
         <div class="card bg-light">
-            <div class="container px-4">
+            <div class="container px-4 pb-3">
                 <h2 class="mb-5 mt-3 text-center">Venez nous voir !</h2>
                 {{ form_start(form) }}
                     {{ form_rest(form) }}
@@ -17,6 +17,7 @@
                     <div class="contact-button row">
                         <button class="btn btn-info mt-2 mb-4 form-control-lg col-sm-2 col-md-6 mt-4">{{ button_label|default('Envoyer') }}</button>
                     </div>
+                    <a href="{{ path('cancel_form_booking') }}">Annuler votre invitation</a>
                 {{ form_end(form) }}
             </div>
         </div>

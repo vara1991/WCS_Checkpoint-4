@@ -17,6 +17,10 @@ main{
     background: center / cover no-repeat url("../images/background-circus.jpg");
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /*head*/
 
 #navbar-ul{

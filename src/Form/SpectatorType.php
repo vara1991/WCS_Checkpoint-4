@@ -17,6 +17,7 @@ class SpectatorType extends AbstractType
         $builder
             ->add('firstname',TextType::class, ['label' => 'Prénom'])
             ->add('lastname',TextType::class, ['label' => 'Nom'])
+            ->add('email')
             ->add('booking', EntityType::class, [
                 'class' => Booking::class,
                 'choice_label' => 'getStartFormat',
